@@ -5,7 +5,7 @@
             <div class=" container-fluid bg-my-orange p-5 ">
                 <div class="container py-5 bg-light  rounded-4 ">
                     <div class="row justify-content-center ">
-                        <CardComponent v-for="(info,index) in cards" :key="index" :img="info.card_images[0].image_url" :name="info.name" :race="info.race" :type="info.type"/>
+                        <CardComponent v-for="(info,index) in store.cardList" :key="index" :img="info.card_images[0].image_url" :name="info.name" :race="info.race" :type="info.type"/>
                     </div>
                 </div>
             </div>
@@ -23,8 +23,7 @@ export default {
     },
     data() {
         return {
-            store, 
-            cards: store.cardList
+            store
         }
     }
 }

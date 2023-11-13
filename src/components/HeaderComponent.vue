@@ -23,4 +23,5 @@
 .logo-wrapper {
     width: 130px;
 }
+
 </style>

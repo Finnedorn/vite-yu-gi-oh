@@ -2,6 +2,21 @@
 
 @import 'bootstrap/scss/bootstrap';
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $light;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 50px;
+}
+
+
 .bg-my-orange {
     background-color: $orange;
 }
