@@ -8,10 +8,10 @@
                 {{ name }}
             </h3>
             <h5 class="pt-3 fw-light ">
-                {{ status }}
+                {{ race }}
             </h5>
             <h5 class="pt-3 fw-light ">
-                {{ species }}
+                {{ type }}
             </h5>
         </div>
     </div>
@@ -23,8 +23,8 @@
         props: {
             img: String,
             name: String,
-            status: String,
-            species: String
+            race: String,
+            type: String
         },
         data() {
             return {

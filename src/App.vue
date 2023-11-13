@@ -18,6 +18,19 @@
       return {
         store
       }
+    },
+    methods: {
+      getCardsinfo() {
+        const url = this.store.apiUrl
+        axios.get(url).then((response) => {
+          console.log(response.data);
+          store.cardList = response.data.results;
+        })
+      }
+    },
+    created() {
+      this.getCardsinfo();
+      console.log(this.cardList);
     }
   }
 </script>
