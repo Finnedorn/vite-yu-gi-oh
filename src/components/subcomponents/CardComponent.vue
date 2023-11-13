@@ -1,16 +1,16 @@
 <template>
-    <div class="card-wrapper">
-        <div class="img-card-wrapper">
+    <div class="col-2 ms-1 py-1">
+        <div>
             <img :src="img" :alt="name">
         </div>
         <div class=" text-center ">
-            <h3 class="pt-3">
+            <h4 class=" fs-5 ">
                 {{ name }}
-            </h3>
-            <h5 class="pt-3 fw-light ">
+            </h4>
+            <h5 class=" fw-light ">
                 {{ race }}
             </h5>
-            <h5 class="pt-3 fw-light ">
+            <h5 class=" fs-6 fw-light ">
                 {{ type }}
             </h5>
         </div>
@@ -28,16 +28,11 @@
         },
         data() {
             return {
-
             }
         },
     }
 </script>
 
 <style lang="scss" scoped>
-.img-card-wrapper {
-    border-radius: 50%;
-    height: 200px;
-    overflow: hidden;
-}
+
 </style>
