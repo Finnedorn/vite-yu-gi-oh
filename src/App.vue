@@ -23,8 +23,8 @@
       getCardsinfo() {
         const url = this.store.apiUrl
         axios.get(url).then((response) => {
-          console.log(response.data);
-          store.cardList = response.data.results;
+          console.log(response.data.data);
+          store.cardList = response.data.data.results;
         })
       }
     },
