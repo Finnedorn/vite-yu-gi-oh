@@ -3,7 +3,7 @@
         <div>
             <img :src="img" :alt="name">
         </div>
-        <div class=" text-center ">
+        <div class=" text-center py-3">
             <h4 class=" fs-5 ">
                 {{ name }}
             </h4>
