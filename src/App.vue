@@ -38,11 +38,15 @@
       //select è un valore fantoccio, non specificandolo nell @filter-select automaticamente è implicito il valore che ho importato con $emit
       setParams(select) {
         console.log(select)
-        //activeparams diventa un oggeto con key archetypo a seconda del valore del select cioè activeselect
-        this.activeParams = {
+        if(select) {
+          //activeparams diventa un oggeto con key archetypo a seconda del valore del select cioè activeselect
+          this.activeParams = {
           num: 20,
           offset:0,
           archetype: select
+          }
+        } else {
+          this.params = null
         }
         this.getCardsinfo()
       },
@@ -54,6 +58,16 @@
           console.log(store.cardList);
         })
       },
+      getArchetype() {
+        const urlArchetypes= this.store.apiUrlArchetypes
+        axios.get(urlArchetypes).then((response) => {
+          console.log(response.data);
+          for(let i = 0; i < 20; i++){
+            store.archetypeList.push(response.data[i].archetype_name)
+          }
+          console.log(store.archetypeList);
+        })
+      },
       LoadingPlay() {
         setTimeout(() => {
           this.loadingPg = false;
@@ -62,6 +76,7 @@
     },
     created() {
       this.getCardsinfo();
+      this.getArchetype();
     },
     mounted() {
       this.LoadingPlay();
